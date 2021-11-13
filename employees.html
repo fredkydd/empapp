@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Illusion" />
+    <meta name="keywords" content="news, dev, etc" />
+    <meta name="description" content="Fred's Personal Web Page" />
+    <!-- description gives the info to search engines about the content of the Web Site -->
+    <meta http-equiv="refresh" content="811" />
+    <meta name="application-name" content="illusion" />
+    <meta name="generator" content="error |811" />
+
+    <title>Employees</title>
+
+    <!-- Bootsrtap 5 -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External  Stylesheet -->
+
+    <!-- <link rel="stylesheet" href="..\styles\style.css" /> -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href=".\pictures\Angular_icon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #e3f2fd"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="dashboard.html">
+          <img
+            src=".\pictures\circle.svg"
+            alt="Laptop"
+            width="25"
+            height="20"
+            type="svg"
+          />
+          <img
+            src=".\pictures\triangle.svg"
+            alt="Laptop"
+            width="25"
+            height="20"
+            type="svg"
+          />
+          <img
+            src=".\pictures\square.svg"
+            alt="Laptop"
+            width="25"
+            height="20"
+            type="svg"
+          />
+          Hi, Fred</a
+        >
+        <!-- add employee's name into a -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="employees.html"
+                >Employees</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Search..."
+              aria-label="Seach an employee"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-success btn-sm"
+              type="button"
+              id="button-addon2"
+            >
+              <i class="bi bi-google"></i>
+            </button>
+          </form>
+          <a
+            href="index.html"
+            type="button"
+            class="btn btn-sm btn-outline-danger ms-1"
+            >Log out</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row mt-3">
+        <!-- add employee, view all section -->
+        <div class="col-lg-3 col-md-3">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action active text-center"
+              >Employees data</a
+            >
+            <!-- <a
+              href="#"
+              class="list-group-item list-group-item-action text-center"
+              >Employee 001</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action text-center"
+              >Employee 002</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action text-center"
+              >Employee 003</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action text-center"
+              >Employee 004</a
+            > -->
+            <a
+              href="#"
+              class="
+                list-group-item list-group-item-action list-group-item-success
+                text-center
+              "
+              data-bs-toggle="modal"
+              data-bs-target="#addAnEmployee"
+              >Add an employee</a
+            >
+            <a
+              href="employees.html"
+              class="
+                list-group-item list-grou-item-action list-group-item-warning
+                text-center
+                mb-4
+              "
+              >View all</a
+            >
+          </div>
+        </div>
+
+        <!-- employee details, edit, remove -->
+        <div class="col-lg-9 col-md-9">
+          <table class="table table-striped table-hover">
+            <tr>
+              <th>
+                <img src=".\pictures\infinity.svg" alt="infinity" />
+              </th>
+              <th>First Name</th>
+              <th>Second Name</th>
+              <th>Phone</th>
+              <th>Detail</th>
+              <th>Edit</th>
+              <th>Remove</th>
+            </tr>
+            <tr>
+              <td>001</td>
+              <td>Fred</td>
+              <td>Kydd</td>
+              <td>+1323xxx</td>
+              <td>
+                <a
+                  class="btn btn-sm btn-info"
+                  data-bs-toggle="modal"
+                  data-bs-target="#employeeDetail001"
+                  type="button"
+                >
+                  Detail
+                </a>
+              </td>
+              <td>
+                <a
+                  href="#"
+                  class="btn btn-sm btn-warning"
+                  data-bs-toggle="modal"
+                  data-bs-target="#editEmployeeDetail001"
+                  type="button"
+                  >Edit</a
+                >
+              </td>
+              <td>
+                <a
+                  href="#"
+                  class="btn btn-sm btn-danger"
+                  type="button"
+                  onclick="confirm('Are you sure want to delete \'Fred Kydd\' ?')"
+                  >Remove</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td colspan="2">F R E D</td>
+
+              <td>+1323xxx</td>
+              <td>
+                <a class="btn btn-sm btn-info disabled" type="button">
+                  Detail
+                </a>
+              </td>
+              <td>
+                <a href="#" class="btn btn-sm btn-warning disabled">Edit</a>
+              </td>
+              <td>
+                <a href="#" class="btn btn-sm btn-danger disabled">Remove</a>
+              </td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Anna</td>
+              <td>Williams</td>
+              <td>+1323xxx</td>
+              <td>
+                <a class="btn btn-sm btn-info disabled" type="button">
+                  Detail
+                </a>
+              </td>
+              <td>
+                <a href="#" class="btn btn-sm btn-warning disabled">Edit</a>
+              </td>
+              <td>
+                <a href="#" class="btn btn-sm btn-danger disabled">Remove</a>
+              </td>
+            </tr>
+            <tr>
+              <td>004</td>
+              <td>Nina</td>
+              <td>Williams</td>
+              <td>+1323xxx</td>
+              <td>
+                <a class="btn btn-sm btn-info disabled" type="button">
+                  Detail
+                </a>
+              </td>
+              <td>
+                <a href="#" class="btn btn-sm btn-warning disabled">Edit</a>
+              </td>
+              <td>
+                <a href="" class="btn btn-sm btn-danger disabled">Remove</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Add an employee modal -->
+        <div
+          class="modal fade"
+          id="addAnEmployee"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content shadow">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">
+                  Add an employee
+                </h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="type your first name"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="type your second name"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <input
+                      type="tel"
+                      class="form-control form-control-sm"
+                      placeholder="type your phone number"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control form-control-sm"
+                      placeholder="type your email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="date"
+                      class="form-control form-control-sm"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <select
+                      name=""
+                      id=""
+                      class="form-control form-control-sm"
+                      style="background-color: #e3f2fd"
+                    >
+                      <option value="Web Developer">
+                        Front-end Web Developer
+                      </option>
+                      <option value="Web Developer">
+                        Back-end Web Developer
+                      </option>
+                      <option value="Web Developer">
+                        Full-stack Web Developer
+                      </option>
+                      <option value="Web Designer">Web Designer</option>
+                      <option value="UX/UI Developer">UX/UI Developer</option>
+                      <option value="Graphice Designer">
+                        Graphice Designer
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3 gap-2 d-grid">
+                    <input
+                      type="submit"
+                      class="btn btn-success btn-sm"
+                      value="Add an employee"
+                    />
+                  </div>
+                </form>
+              </div>
+              <!-- <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Details modal we should add multiple details modal for each employee for back-end.
+          Learn about it when you learn node.js or deno.js-->
+
+        <!-- employee detail 001 modal -->
+        <div
+          class="modal fade"
+          id="employeeDetail001"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content shadow">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">
+                  Employee Details
+                </h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <table class="table table-striped">
+                  <tr>
+                    <th>First name</th>
+                    <td>Fred</td>
+                  </tr>
+                  <tr>
+                    <th>Second name</th>
+                    <td>Kydd</td>
+                  </tr>
+                  <tr>
+                    <th>Phone number</th>
+                    <td>+1323xxxxx</td>
+                  </tr>
+                  <tr>
+                    <th>Email address</th>
+                    <td>developerfred@outlook.com</td>
+                  </tr>
+                  <tr>
+                    <th>Joined date</th>
+                    <td>11.08.2021</td>
+                  </tr>
+                  <tr>
+                    <th>Position</th>
+                    <td>Front-end Web Developer</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- value details comes from back-end i just add manually here by myself -->
+
+        <!-- edit employee 001 modal -->
+        <div
+          class="modal fade"
+          id="editEmployeeDetail001"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content shadow">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">
+                  Edit Employee Details
+                </h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      value="Fred"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      value="Kydd"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <input
+                      type="tel"
+                      class="form-control form-control-sm"
+                      value="+1323xxxxx"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control form-control-sm"
+                      value="developerfred@outlook.com"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      value="November 8, 2021"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      value="Front-end Web Developer"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3 gap-2 d-grid">
+                    <input
+                      type="submit"
+                      class="btn btn-success btn-sm"
+                      value="Update employee details"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- with bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Illusion" />
+    <meta name="keywords" content="news, dev, etc" />
+    <meta name="description" content="Fred's Personal Web Page" />
+    <!-- description gives the info to search engines about the content of the Web Site -->
+    <meta http-equiv="refresh" content="811" />
+    <meta name="application-name" content="illusion" />
+    <meta name="generator" content="error |811" />
+
+    <title>Dashboard</title>
+
+    <!-- Bootsrtap 5 -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External  Stylesheet -->
+
+    <!-- <link rel="stylesheet" href="..\styles\style.css" /> -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href=".\pictures\Angular_icon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #e3f2fd"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="dashboard.html">
+          <img
+            src=".\pictures\circle.svg"
+            alt="Laptop"
+            width="25"
+            height="20"
+            type="svg"
+          />
+          <img
+            src=".\pictures\triangle.svg"
+            alt="Laptop"
+            width="25"
+            height="20"
+            type="svg"
+          />
+          <img
+            src=".\pictures\square.svg"
+            alt="Laptop"
+            width="25"
+            height="20"
+            type="svg"
+          />
+
+          Hi, Fred</a
+        >
+        <!-- add employee's name into a -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="employees.html"
+                >Employees</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Search..."
+              aria-label="Search at dashboard"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-success btn-sm"
+              type="button"
+              id="button-addon2"
+            >
+              <i class="bi bi-google"></i>
+            </button>
+          </form>
+          <a
+            href="index.html"
+            class="btn btn-sm btn-outline-danger ms-1"
+            type="button"
+            >Log out</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Log in with email or as a guest -->
+        <div class="col-lg-3 col-md-3 mt-5">
+          <div class="card shadow">
+            <div class="card-body">
+              <h4 class="card-title">456 <small>Employees</small></h4>
+            </div>
+            <div class="list-group list-group-fluish">
+              <a
+                href="employees.html"
+                class="list-group-item list-group-item-warning"
+                >View all</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Log in QR code -->
+        <div class="col-lg-3 col-md-3 mt-5">
+          <div class="card shadow">
+            <div class="card-body">
+              <h4 class="card-title">001 <small>Job(s)</small></h4>
+            </div>
+            <div class="list-group list-group-fluish">
+              <a
+                href="jobs.html"
+                class="list-group-item list-group-item-warning"
+                >View all</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- with bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

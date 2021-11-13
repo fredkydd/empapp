@@ -1,0 +1,23 @@
+.box {
+  padding: 0.9375rem;
+  background-color: #ff6347;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+.padding-form {
+  padding: 1rem;
+}
+
+.myCenter {
+  text-align: center;
+}
+
+.cardPicture {
+  width: 100%;
+  height: auto;
+}
+
+.carouselPictiure {
+  height: 20rem;
+}
